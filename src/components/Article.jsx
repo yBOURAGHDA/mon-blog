@@ -15,8 +15,8 @@ function Article({title, img, text, categories, tags}) {
                 </div>
                 <div className="bloc-article p-2">
                     <h2 className="my-3">{title}</h2>
-                    { categories && categories.map((name, index) => (
-                        <a href={"/keyword/" + name} className="btn btn-outline-dark me-3" key={index}>{name}</a>
+                    { categories && categories.map((category) => (
+                        <a href={"/keyword/" + category.name} className="btn btn-outline-dark me-3" key={category.id}>{category.name}</a>
                     ) )}
                     <hr />
                     { tags && tags.map((tag) => (
